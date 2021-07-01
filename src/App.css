@@ -1,11 +1,13 @@
 body{
   padding: auto;
   margin: 0 auto;
+  font-family: tahoma;
 }
 
 .App{
   padding: auto;
 }
+
 .header{
   background-color: slateblue;
   color: azure;
@@ -28,17 +30,17 @@ body{
 }
 
 .footer{
-  background-color: rgb(42, 38, 68);
+  background-color: rgb(51, 46, 81);
   color: azure;
   padding: 20px;
   position: absolute;
   top: 100%;
   width: 100%;
+  height: 60%;
 }
 
 .navigator{
   background-color: rgba(105, 90, 205, 0.632);
-  padding: 5px;
 }
 
 .row{
@@ -47,10 +49,75 @@ body{
 
 .sidebar-link{
   text-decoration: none;
-  color: indigo;
+  color: dodgerblue;
   font-weight: bold;
 }
 
 .sidebar-list{
   list-style: none;
 }
+
+.sidebar-link:hover{
+  color: yellow;
+  transition: ease;
+  transition-duration: 0.5s;
+}
+
+.search-box{
+  width: 470px;
+  margin-left: 25%;
+  padding: 10px;
+  border-radius: 20px;
+  border: 2px solid green
+}
+
+.search-btn{
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%;
+  width: 50px ;
+  background-color: greenyellow;
+  border: 2px 2px yellowgreen;
+
+}
+
+.search-box:focus{
+  outline: 0;
+  background: azure;
+}
+
+.search-btn:hover{
+  background-color: azure;
+}
+
+.nav-link{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.nav-link:hover{
+  color:greenyellow;
+  transition: ease;
+  transition-duration: 0.5s;
+  text-shadow: 2px 2px 1px  green;
+}
+
+.navs{
+  text-align: center;
+  margin-left: 35%;
+}
+
+.nav-icon{
+  font-size: 20px;
+  margin-right: 40px;
+}
+
+.login-link{
+  text-decoration: none;
+  color: aliceblue;
+}
+
+.login-link:hover{
+  color: greenyellow;
+}
+
