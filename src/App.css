@@ -1,123 +1,203 @@
-body{
-  padding: auto;
-  margin: 0 auto;
+/* GENERAL styles*/
+
+body {
   font-family: tahoma;
 }
 
-.App{
-  padding: auto;
+input {
+  outline: none;
 }
 
-.header{
+.App {
+  padding: auto;
+  margin: 0 auto;
+  background-repeat: no-repeat;
+}
+
+/* HEADER styles */
+
+.header {
+  width: 1519px;
   background-color: slateblue;
   color: azure;
   padding: 20px;
   margin: 0 auto;
 }
 
-.content{
-  color: black;
-  padding: 20px;
-
-}
-
-.sidebar{
-  background-color: rgba(105, 90, 205, 0.075);
-  color: azure;
-  padding: 5px;
-  padding-top: 10%;
-  text-decoration: none;
-}
-
-.footer{
-  background-color: rgb(51, 46, 81);
-  color: azure;
-  padding: 20px;
-  position: absolute;
-  top: 100%;
-  width: 100%;
-  height: 60%;
-}
-
-.navigator{
-  background-color: rgba(105, 90, 205, 0.632);
-}
-
-.row{
-  width: 99%;
-}
-
-.sidebar-link{
-  text-decoration: none;
-  color: dodgerblue;
-  font-weight: bold;
-}
-
-.sidebar-list{
-  list-style: none;
-}
-
-.sidebar-link:hover{
-  color: yellow;
-  transition: ease;
-  transition-duration: 0.5s;
-}
-
-.search-box{
-  width: 470px;
+.search-box {
+  width: 50%;
   margin-left: 25%;
   padding: 10px;
-  border-radius: 20px;
-  border: 2px solid green
+  border-radius: 30px;
+  border: 2px solid green;
+  text-align: center;
 }
 
-.search-btn{
+.search-btn {
   padding: 10px;
   margin: 10px;
   border-radius: 50%;
-  width: 50px ;
-  background-color: greenyellow;
-  border: 2px 2px yellowgreen;
-
+  width: 48px;
+  background-color: rgb(1, 248, 129);
+  border: 1px solid green;
 }
 
-.search-box:focus{
+.search-box:focus {
   outline: 0;
   background: azure;
+  text-align: left;
+  transition-duration: 1s;
 }
 
-.search-btn:hover{
+.search-btn:hover {
   background-color: azure;
-}
-
-.nav-link{
-  text-decoration: none;
-  color: aliceblue;
-}
-
-.nav-link:hover{
-  color:greenyellow;
-  transition: ease;
   transition-duration: 0.5s;
-  text-shadow: 2px 2px 1px  green;
+  box-shadow: 2px 2px 1px indigo;
 }
 
-.navs{
-  text-align: center;
-  margin-left: 35%;
+#search-area{
+  width: 50%;
+  display: inline;
 }
 
-.nav-icon{
-  font-size: 20px;
-  margin-right: 40px;
-}
-
-.login-link{
+.login-link {
   text-decoration: none;
   color: aliceblue;
 }
 
-.login-link:hover{
-  color: greenyellow;
+.login-link:hover {
+  color: rgb(1, 248, 129);
+  transition-duration: 0.5s;
+  text-shadow: 2px 2px 1px indigo;
 }
 
+.row {
+  width: 100%;
+}
+
+.logo-grad {
+  background-image: linear-gradient(to right, slateblue 0%, #93F9B9 51%, #1D976C 100%)
+}
+
+.logo-grad {
+  text-align: center;
+  text-transform: uppercase;
+  transition: 0.5s;
+  background-size: 200% auto;
+  color: white;
+  box-shadow: 0 0 20px #eee;
+  border-radius: 50%;
+  padding: 10px;
+}
+
+.logo-grad:hover {
+  background-position: right center;
+  color: #fff;
+  text-decoration: none;
+}
+
+.login-icon {
+  font-size: 20px;
+  margin-top: 25px;
+  margin-left: 25px;
+}
+
+/* NAVIGATOR styles */
+
+.navigator {
+  width: 1519px;
+  margin: 0 auto;
+  background-color: rgba(105, 90, 205, 0.5);
+  margin-bottom: 2%;
+}
+
+.nav-link {
+  text-decoration: none;
+  color: aliceblue;
+  margin-right: 20px;
+}
+
+.nav-link:hover {
+  color: rgb(1, 248, 129);
+  transition: ease;
+  transition-duration: 0.3s;
+  text-shadow: 1px 1px 1px black;
+}
+
+.navs {
+  text-align: center;
+  margin-left: 28%;
+}
+
+.nav-icon {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* CONTENT styles */
+
+.content {
+  width: 1300px;
+  margin: 0 auto;
+  color: black;
+  padding: 20px;
+  background-color: rgba(28, 113, 69, 0.08);
+}
+
+.posts {
+  background-color: #2a403910;
+  padding: 20px;
+}
+
+/* FILTER styles */
+
+.filter {
+  display: inline;
+  overflow: auto;
+  padding: 100px;
+} 
+
+.filter-table {
+  margin: 0 auto;
+  width: auto;
+}
+
+.filter-settings {
+  padding: 0;
+  width: 200px;
+}
+
+.price-filter-inp {
+  width: 40%;
+  color: #1D976C;
+  font-weight: bold;
+}
+
+/* FOOTER styles */
+
+.footer {
+  background-color: rgb(51, 46, 81);
+  color: azure;
+  padding: 20px;
+  width: 100%;
+  height: 800px;
+  margin-top: 30%;
+}
+
+/* POST styles */
+.post{
+  width: 222px;
+  height: 280px;
+  background-color: white;
+  border-radius: 30px;
+  padding: 15px;
+  display: inline-block;
+  margin: 10px;
+}
+
+.post-img{
+  width: 100%;
+  height: 50%;
+  background-color:slateblue;
+  border-radius: 10px;
+}
