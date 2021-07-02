@@ -5,7 +5,7 @@ export default class Filter extends Component {
     render() {
         return (
             <div className="filter" hidden={this.props.hidden}>
-                <Table className="text-center filter-table bg-light shadow" size="sm" bordered> 
+                <Table className="text-center filter-table shadow" size="sm" bordered> 
                     <thead>
                         <tr>
                             <th>Qiymət Aralığı</th>

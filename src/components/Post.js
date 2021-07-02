@@ -5,7 +5,6 @@ export default class Post extends Component {
         return (
             <div className="post shadow">
                 <div className="post-img">
-                    s
                 </div>
             </div>
         )

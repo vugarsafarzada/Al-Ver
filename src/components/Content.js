@@ -5,7 +5,7 @@ import Post from './Post';
 export default class Content extends Component {
     render() {
         return (
-            <div className="content shadow rounded">
+            <div className="content shadow">
                 <Filter hidden={false}/> 
                 <div className="posts">
                     <Post/>
