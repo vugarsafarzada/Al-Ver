@@ -1,5 +1,6 @@
-import React, { Component } from 'react'
-import { Row, Col, Navbar, NavbarBrand } from 'reactstrap'
+import React, { Component } from 'react';
+import { Row, Col, Navbar, NavbarBrand } from 'reactstrap';
+import logo from '../../src/images/logo.png'
 
 export default class Header extends Component {
     render() {
@@ -10,7 +11,8 @@ export default class Header extends Component {
                         <Col xs="2">
                             <div id="logo-area">
                                 <NavbarBrand href="/" style={{ textDecoration: "none", color: "#FFF" }}>
-                                    <i className="fab fa-battle-net text-light logo-grad" style={{ fontSize: "60px", marginLeft: '20px' }}></i>
+                                    <img src={logo} alt="logo" className="text-light logo-grad"/>
+
                                 </NavbarBrand>
                             </div>
                         </Col>

@@ -2,10 +2,10 @@
 
 body {
   font-family: tahoma;
-  background-color: rgba(105, 90, 205, 0.3);
+  background-color: rgba(105, 90, 205, 0.095);
 }
 
-input select {
+input, select, button {
   outline: none;
 }
 
@@ -13,12 +13,15 @@ input select {
   padding: auto;
   margin: 0 auto;
   background-repeat: no-repeat;
+  display: flex;
+  flex-direction: column;
 }
 
 /* HEADER styles */
 
 .header {
   width: 1519px;
+  min-width: 100%;
   background-color: slateblue;
   color: azure;
   padding: 20px;
@@ -56,7 +59,7 @@ input select {
   box-shadow: 2px 2px 1px indigo;
 }
 
-#search-area{
+#search-area {
   width: 50%;
   display: inline;
 }
@@ -77,10 +80,8 @@ input select {
 }
 
 .logo-grad {
-  background-image: linear-gradient(to right, slateblue 0%, #93F9B9 51%, #1D976C 100%)
-}
-
-.logo-grad {
+  width: 70px;
+  background-image: linear-gradient(to right, slateblue 0%, #93F9B9 51%, #1D976C 100%);
   text-align: center;
   text-transform: uppercase;
   transition: 0.5s;
@@ -88,7 +89,7 @@ input select {
   color: white;
   box-shadow: 0 0 20px #eee;
   border-radius: 50%;
-  padding: 10px;
+  padding: 5px;
 }
 
 .logo-grad:hover {
@@ -107,6 +108,7 @@ input select {
 
 .navigator {
   width: 1519px;
+  min-width: 100%;
   margin: 0 auto;
   background-color: rgba(105, 90, 205, 0.5);
   margin-bottom: 2%;
@@ -126,8 +128,9 @@ input select {
 }
 
 .navs {
-  text-align: center;
-  margin-left: 28%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap
 }
 
 .nav-icon {
@@ -144,11 +147,12 @@ input select {
   padding: 20px;
   background-color: #21D4FD;
   background-image: linear-gradient(45deg, #21D4FD 0%, #B721FF 100%);
-  border-radius: 10px;  
+  border-radius: 10px;
+  box-shadow: 8px 8px 10px gray;
 }
 
 .posts {
-  background-color: rgba(15, 15, 15, 0.061);
+  background-color: rgba(15, 15, 15, 0.2);
   padding: 20px;
 }
 
@@ -158,7 +162,7 @@ input select {
   display: inline;
   overflow: auto;
   padding: 100px;
-} 
+}
 
 .filter-table {
   margin: 0 auto;
@@ -186,24 +190,55 @@ input select {
   color: azure;
   padding: 20px;
   width: 100%;
-  height: 800px;
+  height: 500px;
   margin-top: 30%;
 }
 
 /* POST styles */
-.post{
+
+.post {
   width: 222px;
   height: 280px;
-  background-color: white;
+  background-color: rgb(255, 255, 255);
   border-radius: 30px;
   padding: 15px;
   display: inline-block;
   margin: 10px;
+  overflow: hidden;
+  font-size: 15px;
 }
 
-.post-img{
+.post:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+  transition-duration: 0.3s
+}
+
+.post-img {
   width: 100%;
   height: 50%;
-  background-color:rgba(105, 90, 205, 0.455);
+  background-color: rgba(105, 90, 205, 0.455);
   border-radius: 10px;
 }
+
+.post-price {
+  background-color: rgb(20, 193, 114);
+  color: white;
+  padding: 5px;
+  border-radius: 15px;
+  display: inline-block;
+  margin-bottom: 5px;
+}
+
+.post-date {
+  color: grey;
+  font-size: 12px;
+  display: block;
+}
+
+.post-fav-btn {
+  margin-left: 82%; 
+  font-size: 25px;
+  padding: 0;
+}
+
+/*=--------------=*/
