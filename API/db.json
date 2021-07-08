@@ -617,9 +617,9 @@
       "unitsInStock": 32
     },
     {
-      "productName": "Laptop",
+      "productName": "Monopolie",
       "categoryId": 4,
-      "unitPrice": "1000",
+      "unitPrice": "20",
       "quantityPerUnit": "1",
       "unitsInStock": "2",
       "id": 78

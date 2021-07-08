@@ -3,10 +3,10 @@ import React, { Component } from 'react'
 export default class Post extends Component {
     render() {
         return (
-            <div className="post">
+            <div className="post" title={this.props.product_name}>
                 <div className="post-img">
                     <button className="btn post-fav-btn">
-                        <i class={ this.props.favorite ? "fas fa-heart text-danger" : "far fa-heart" }/>
+                        <i className={this.props.favorite ? "fas fa-heart text-danger" : "far fa-heart"} />
                     </button>
                 </div>
                 <br />

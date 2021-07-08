@@ -8,17 +8,18 @@ export default class Content extends Component {
             <div className="content">
                 <Filter hidden={true} />
                 <div className="posts">
-
                     {
                         this.props.products.map(post => (
-                            <Post
-                                id={post.id}
-                                category_id={post.categoryId}
-                                product_name={post.productName}
-                                quantity_per_unit={post.quantityPerUnit}
-                                product_price={post.unitPrice}
-                                favorite={false}
-                                product_stocks={post.unitsInStock} />
+                            <a key={post.id} href={"/products?id=" + post.id} className="text-dark">
+                                <Post
+                                    id={post.id}
+                                    category_id={post.categoryId}
+                                    product_name={post.productName}
+                                    quantity_per_unit={post.quantityPerUnit}
+                                    product_price={post.unitPrice}
+                                    favorite={false}
+                                    product_stocks={post.unitsInStock} />
+                            </a>
                         ))
                     }
                 </div>

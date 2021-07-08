@@ -1,9 +1,12 @@
 import './App.css'
+import Product from './components/Product';
+import { Route, Switch } from 'react-router-dom';
+import React, { Component } from 'react'
+import Error from './components/Error';
+import Main from './components/Main';
 import Header from './components/Header';
-import Content from './components/Content';
 import Footer from './components/Footer';
 import Navigator from './components/Navigator';
-import React, { Component } from 'react'
 
 class App extends Component {
   state = {
@@ -20,7 +23,7 @@ class App extends Component {
   getAPI_products = () => {
     fetch('http://localhost:3000/products')
       .then(response => response.json())
-      .then(data => this.setState({ products: data }))
+      .then(data => this.setState({ products: data.reverse() }))
   }
 
   componentDidMount() {
@@ -33,7 +36,12 @@ class App extends Component {
       <div className="App">
         <Header />
         <Navigator />
-        <Content products={this.state.products}/>
+        <Switch>
+          <Route exact path={"/"} render={ props => (<Main products={this.state.products} />) } />
+          <Route exact path={"/main"} render={ props => (<Main products={this.state.products} />) } />
+          <Route exact path={"/products"} component={Product} />
+          <Route component={Error} />
+        </Switch>
         <Footer />
       </div>
     )
