@@ -17,7 +17,7 @@ export default class Content extends Component {
                                     product_name={post.productName}
                                     quantity_per_unit={post.quantityPerUnit}
                                     product_price={post.unitPrice}
-                                    favorite={false}
+                                    favorite={post.favorite}
                                     product_stocks={post.unitsInStock} />
                             </a>
                         ))

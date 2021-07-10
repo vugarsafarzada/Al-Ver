@@ -10,7 +10,6 @@ input, select, button {
 }
 
 .App {
-  padding: auto;
   margin: 0 auto;
   background-repeat: no-repeat;
   display: flex;
@@ -229,6 +228,15 @@ input, select, button {
   margin-bottom: 5px;
 }
 
+.post-price-sec {
+  background-color: rgb(20, 193, 114);
+  color: white;
+  padding: 5px;
+  width: 200px;
+  border-radius: 15px;
+  display: inline-block;
+}
+
 .post-date {
   color: grey;
   font-size: 12px;
@@ -239,6 +247,40 @@ input, select, button {
   margin-left: 82%; 
   font-size: 25px;
   padding: 0;
+}
+
+.post-fav-btn-sec {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  position: relative;
+  bottom: 8px;
+  left: 70px;
+}
+
+/* PRODUCT styles */
+.product{
+  padding: 10px;
+}
+
+.product-img{
+  width: 900px;
+  height: 600px;
+  background-color: rgba(105, 90, 205, 0.455);
+  border-radius: 10px;
+  margin: 0 auto;
+}
+
+.product-info{
+  background-color: rgb(239, 238, 255);
+  padding: 20px;
+  font-size: 15px;
+  border-radius: 10px;
+
+}
+
+.price-fav-box{
+  position: static;
 }
 
 /*=--------------=*/

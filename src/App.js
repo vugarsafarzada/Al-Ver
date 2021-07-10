@@ -7,6 +7,7 @@ import Main from './components/Main';
 import Header from './components/Header';
 import Footer from './components/Footer';
 import Navigator from './components/Navigator';
+import Search from './components/Search';
 
 class App extends Component {
   state = {
@@ -34,12 +35,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
+        <Header products={this.state.products}/>
         <Navigator />
         <Switch>
           <Route exact path={"/"} render={ props => (<Main products={this.state.products} />) } />
           <Route exact path={"/main"} render={ props => (<Main products={this.state.products} />) } />
           <Route exact path={"/products"} component={Product} />
+          <Route exact path={"/search"} component={Search} />
           <Route component={Error} />
         </Switch>
         <Footer />
