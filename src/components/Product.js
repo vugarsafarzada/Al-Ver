@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import { Row, Col } from 'reactstrap';
+import Error from './Error';
 
 class Product extends Component {
     state = {
@@ -9,12 +10,17 @@ class Product extends Component {
     getProductByRequest = () => {
         var request = document.location.search;
         var requestType = decodeURI(request).split("=")[0];
+
+        var check = (data) =>{
+            data.length !== 0 ? this.setState({productData:data}) : window.location.assign("/error");
+        }
+
         if (requestType === "?id") {
             if (request !== null) {
                 var productUrL = `http://localhost:3000/products${request}`
                 fetch(productUrL)
                     .then(response => response.json())
-                    .then(data => this.setState({ productData: data }))
+                    .then(data => check(data))
             } else{
                 window.location.assign("/main")
             }

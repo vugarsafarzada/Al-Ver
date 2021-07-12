@@ -285,4 +285,16 @@ input, select, button {
   position: static;
 }
 
+
+/* SEARCH styles */
+
+.s-results{
+  position: fixed;
+  background-color: rgba(105, 90, 205, 0.455);
+  color: azure;
+  padding: 1%;
+  border-top-right-radius: 15px;
+  border-bottom-right-radius: 15px;
+}
+
 /*=--------------=*/

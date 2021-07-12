@@ -32,8 +32,8 @@ export default class Search extends Component {
     }
     render() {
         return (
-            <div className="">
-                <h6 className="text-light bg-success d-inline p-3">Nəticə: {this.state.resultProducts.length}</h6>
+            <div>
+                <h6 className="s-results">Nəticə: {this.state.resultProducts.length}</h6>
                 {
                     this.state.resultProducts.length > 0 ? <Content products={this.state.resultProducts}/> : <Error message="Axtarılan növdə məhsul mövcut deyil"/>
                 }
