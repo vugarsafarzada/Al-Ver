@@ -5,7 +5,7 @@ class Main extends Component {
     render() {
         return (
             <div>
-                <Content products={this.props.products} />
+                <Content products={this.props.products} route={this.props.route}/>
             </div>
         )
     }

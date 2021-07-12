@@ -3,23 +3,27 @@ import { Row, Col } from 'reactstrap';
 
 class Product extends Component {
     state = {
-        productData: []
+        productData: [],
     }
 
-    getProductById = () => {
-        var id = new URLSearchParams(this.props.location.search).get("id");
-        if (id !== null) {
-            var productUrL = `http://localhost:3000/products?id=${id}`
-            fetch(productUrL)
-                .then(response => response.json())
-                .then(data => this.setState({ productData: data }))
-        } else if (id === null) {
-            window.location.assign("/main")
+    getProductByRequest = () => {
+        var request = document.location.search;
+        var requestType = decodeURI(request).split("=")[0];
+        if (requestType === "?id") {
+            if (request !== null) {
+                var productUrL = `http://localhost:3000/products${request}`
+                fetch(productUrL)
+                    .then(response => response.json())
+                    .then(data => this.setState({ productData: data }))
+            } else{
+                window.location.assign("/main")
+            }
         }
+
     }
 
     componentDidMount() {
-        this.getProductById()
+        this.getProductByRequest()
     }
     render() {
         return (
@@ -63,9 +67,7 @@ class Product extends Component {
                                                 </button>
                                             </Col>
                                         </Row>
-
                                     </div>
-
                                 </Col>
                             </Row>
                         </div>

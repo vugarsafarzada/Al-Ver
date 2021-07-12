@@ -111,6 +111,7 @@ input, select, button {
   margin: 0 auto;
   background-color: rgba(105, 90, 205, 0.5);
   margin-bottom: 2%;
+  position: relative;
 }
 
 .nav-link {
@@ -209,7 +210,8 @@ input, select, button {
 
 .post:hover {
   background-color: rgba(255, 255, 255, 0.952);
-  transition-duration: 0.3s
+  transition-duration: 0.3s;
+  box-shadow: 5px 5px 5px indigo;
 }
 
 .post-img {

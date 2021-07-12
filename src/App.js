@@ -27,6 +27,7 @@ class App extends Component {
       .then(data => this.setState({ products: data.reverse() }))
   }
 
+
   componentDidMount() {
     this.getAPI_categories();
     this.getAPI_products();
@@ -40,11 +41,11 @@ class App extends Component {
         <Switch>
           <Route exact path={"/"} render={ props => (<Main products={this.state.products} />) } />
           <Route exact path={"/main"} render={ props => (<Main products={this.state.products} />) } />
-          <Route exact path={"/products"} component={Product} />
-          <Route exact path={"/search"} component={Search} />
+          <Route exact path={"/products"} render={ props => (<Product products={this.state.products} />) } />
+          <Route exact path={"/search"} component={Search} />  
           <Route component={Error} />
         </Switch>
-        <Footer />
+        <Footer />  
       </div>
     )
   }

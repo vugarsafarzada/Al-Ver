@@ -16,7 +16,7 @@ export default class Header extends Component {
     search = () => {
         var searchValue = document.getElementById('search-box').value;
         if(searchValue.length >= 1){
-            window.location.assign(`search?id=${searchValue}`)
+            window.location.assign(`search?key=${searchValue}`)
         }
     }
 

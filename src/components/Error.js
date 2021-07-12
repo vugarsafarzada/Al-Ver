@@ -6,7 +6,7 @@ export default class Error extends Component {
             <div>
                 <div className="content text-center" style={{marginTop:"8%", color:"white", padding:"50px", width:"500px"}}>
                     <h2 style={{fontWeight:"bold"}}>XƏTA!</h2>
-                    <h3>Belə səhifə mövcut deyil!</h3>
+                    <h3>{this.props.message ? this.props.message : "Səhifə mövcut deyil"}</h3>
                 </div>
             </div>
         )
