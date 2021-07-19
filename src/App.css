@@ -189,9 +189,10 @@ input, select, button {
   background-color: rgb(51, 46, 81);
   color: azure;
   padding: 20px;
-  width: 100%;
+  width: 1519px;
+  min-width: 100%;
   height: 500px;
-  margin-top: 30%;
+  margin-top: 20%;
 }
 
 /* POST styles */

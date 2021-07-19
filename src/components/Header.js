@@ -38,7 +38,7 @@ export default class Header extends Component {
                                 <datalist id="search-box-list">
                                     {
                                         this.props.products.map(item => (
-                                            <option key={item.id} value={item.productName} />
+                                            <option key={item.id - 1} value={item.productName} />
                                         ))
 
                                     }

@@ -1,29 +1,33 @@
-import React, { Component } from 'react';
+//Tools
+import React from 'react';
+import { Link } from 'react-router-dom';
+
+//Components
 import Filter from './Filter';
 import Post from './Post';
 
-export default class Content extends Component {
-    render() {
-        return (
-            <div className="content">
-                <Filter hidden={true} />
-                <div className="posts">
-                    {
-                        this.props.products.map(post => (
-                            <a key={post.id} href={"/products?id=" + post.id} className="text-dark">
-                                <Post
-                                    id={post.id}
-                                    category_id={post.categoryId}
-                                    product_name={post.productName}
-                                    quantity_per_unit={post.quantityPerUnit}
-                                    product_price={post.unitPrice}
-                                    favorite={post.favorite}
-                                    product_stocks={post.unitsInStock} />
-                            </a>
-                        ))
-                    }
-                </div>
-            </div>  
-        )
-    }
+function Content(props) {
+    return (
+        <div className="content">
+            <Filter hidden={false} />
+            <div className="posts">
+                {
+                    props.products.map(post => (
+                        <Link key={post.id-1} to={"/products?id=" + post.id} className="text-dark">
+                            <Post
+                                id={post.id}
+                                category_id={post.categoryId}
+                                product_name={post.productName}
+                                quantity_per_unit={post.quantityPerUnit}
+                                product_price={post.unitPrice}
+                                favorite={post.favorite}
+                                product_stocks={post.unitsInStock} />
+                        </Link>
+                    ))
+                }
+            </div>
+        </div>
+    )
 }
+
+export default Content;
