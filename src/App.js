@@ -2,6 +2,7 @@
 import './App.css'
 import Product from './components/Product';
 import { Route, Switch } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import React, { useEffect, useState } from 'react';
 import { productsContext } from './contexts/productsContext';
 
@@ -21,21 +22,23 @@ function App() {
     fetch('http://localhost:3000/products')
       .then(response => response.json())
       .then(data => setProducts(data.reverse()))
-  },[]);
- 
+  }, []);
+
   return (
     <productsContext.Provider value={products}>
       <div className="App">
         <Header products={products} />
         <Navigator />
-        <Switch>
-          <Route exact path={"/"} render={props => (<Main products={products} />)} />
-          <Route exact path={"/main"} render={props => (<Main products={products} />)} />
-          <Route exact path={"/favorites"} render={props => (<Favorites />)} />
-          <Route exact path={"/products"} render={props => (<Product products={products}/>)} />
-          <Route exact path={"/search"} component={Search} />
-          <Route component={Error} />
-        </Switch>
+        <Router>
+          <Switch>
+            <Route exact path={"/"} render={props => (<Main products={products} />)} />
+            <Route exact path={"/main"} render={props => (<Main products={products} />)} />
+            <Route exact path={"/favorites"} render={props => (<Favorites />)} />
+            <Route exact path={"/products"} render={props => (<Product products={products} />)} />
+            <Route exact path={"/search"} component={Search} />
+            <Route component={Error} /> 
+          </Switch>
+        </Router>
         <Footer />
       </div>
     </productsContext.Provider>

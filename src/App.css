@@ -151,6 +151,12 @@ input, select, button {
   box-shadow: 8px 8px 10px gray;
 }
 
+.content-label{
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
 .posts {
   background-color: rgba(15, 15, 15, 0.2);
   padding: 20px;

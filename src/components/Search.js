@@ -5,6 +5,7 @@ import Error from './Error';
 export default class Search extends Component {
     state = {
         resultProducts: [],
+        searched:""
     }
 
     SearchProducts = () => {
@@ -20,7 +21,8 @@ export default class Search extends Component {
             var filterData = (data) => {
                 var value = decodeURI(request).split("?key=")[1];
                 var filterResults = data.filter(item => item.productName.toLowerCase().startsWith(value.toLowerCase()));
-                this.setState({ resultProducts: filterResults.reverse() })
+                this.setState({ resultProducts: filterResults.reverse() });
+                this.setState({searched: value});
             }
 
         }
@@ -35,7 +37,7 @@ export default class Search extends Component {
             <div>
                 <h6 className="s-results">Nəticə: {this.state.resultProducts.length}</h6>
                 {
-                    this.state.resultProducts.length > 0 ? <Content products={this.state.resultProducts}/> : <Error message="Axtarılan növdə məhsul mövcut deyil"/>
+                    this.state.resultProducts.length > 0 ? <Content label={`Axtarıldı: "${this.state.searched}"`} products={this.state.resultProducts}/> : <Error message="Axtarılan növdə məhsul mövcut deyil"/>
                 }
             </div>
         )

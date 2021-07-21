@@ -21,13 +21,6 @@
   <component name="ChangeListManager">
     <list default="true" id="2d29a35e-af09-4cc8-a77a-5288d9f8b52c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/App.test.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.test.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Content.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Content.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Navigator.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Navigator.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/Product.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Product.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -53,12 +46,12 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../redux.learn" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../NextJS/my-app" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors" />
+    <property name="settings.editor.selected.configurable" value="reference.settingsdialog.IDE.editor.colors.General" />
   </component>
   <component name="RunManager">
     <configuration name="start" type="js.build_tools.npm" temporary="true" nameIsGenerated="true">
@@ -91,6 +84,7 @@
       <workItem from="1625777507215" duration="4700000" />
       <workItem from="1626493474477" duration="30000" />
       <workItem from="1626691184224" duration="348000" />
+      <workItem from="1626773396183" duration="145000" />
     </task>
     <servers />
   </component>
@@ -110,9 +104,10 @@
     <option name="oldMeFiltersMigrated" value="true" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1626493502123">
+    <state x="549" y="187" key="FileChooserDialogImpl" timestamp="1626773540189">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1626773540189" />
     <state x="549" y="187" key="FileChooserDialogImpl/0.0.1536.864@0.0.1536.864" timestamp="1626493502123" />
     <state width="499" height="737" key="GridCell.Tab.0.bottom" timestamp="1625788300851">
       <screen x="0" y="0" width="1536" height="864" />
@@ -130,9 +125,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="499" height="737" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1625788300851" />
-    <state x="277" y="78" key="SettingsEditor" timestamp="1625778396790">
+    <state x="238" y="90" key="SettingsEditor" timestamp="1626773507505">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
+    <state x="238" y="90" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1626773507505" />
     <state x="277" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1625778396790" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1625778331774">
       <screen x="0" y="0" width="1536" height="864" />

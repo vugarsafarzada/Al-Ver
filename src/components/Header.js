@@ -15,12 +15,19 @@ export default class Header extends Component {
 
     search = () => {
         var searchValue = document.getElementById('search-box').value;
-        if(searchValue.length >= 1){
+        if (searchValue.length >= 1) {
             window.location.assign(`search?key=${searchValue}`)
         }
     }
 
     render() {
+        let didumeans;
+        if (this.props.products) {
+            didumeans = this.props.products.map(item => {
+                return <option key={item.id - 1} value={item.productName} />
+            })
+        }
+
         return (
             <div className="header">
                 <Navbar color="" expand="md">
@@ -36,17 +43,12 @@ export default class Header extends Component {
                             <div id="search-area">
                                 <input type="search" onChange={this.searchBoxHandler} id="search-box" className="d-inline search-box" placeholder="Axtar..." />
                                 <datalist id="search-box-list">
-                                    {
-                                        this.props.products.map(item => (
-                                            <option key={item.id - 1} value={item.productName} />
-                                        ))
-
-                                    }
+                                    { didumeans }
                                 </datalist>
-                                <button type="search" title="Axtar" onClick={()=> this.search()} className="search-btn btn text-dark">
+                                <button type="search" title="Axtar" onClick={() => this.search()} className="search-btn btn text-dark">
                                     <i className="fas fa-search"></i>
                                 </button>
-                                
+
                             </div>
                         </Col>
                         <Col xs="2">
