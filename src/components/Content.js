@@ -2,6 +2,7 @@
 import React from 'react';
 import { useContext } from 'react';
 import { productsContext } from '../contexts/productsContext';
+
 //Components
 import Filter from './Filter';
 import Post from './Post';
