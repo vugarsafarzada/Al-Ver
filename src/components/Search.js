@@ -1,18 +1,18 @@
-import React, { Component } from 'react';
+//Tools
+import { useEffect, useState } from 'react';
+
+//Components
 import Content from './Content';
 import Error from './Error';
 
-export default class Search extends Component {
-    state = {
-        resultProducts: [],
-        searched:""
-    }
+function Search(props) {
+    const [resultProducts, setResultProducts] = useState([""]);
+    const [searched, setSearched] = useState();
 
-    SearchProducts = () => {
-
+    var SearchProducts = () => {
         var request = document.location.search;
         var requestType = decodeURI(request).split("=")[0];
-
+        
         if (requestType === "?key") {
             fetch('http://localhost:3000/products')
                 .then(response => response.json())
@@ -21,25 +21,24 @@ export default class Search extends Component {
             var filterData = (data) => {
                 var value = decodeURI(request).split("?key=")[1];
                 var filterResults = data.filter(item => item.productName.toLowerCase().startsWith(value.toLowerCase()));
-                this.setState({ resultProducts: filterResults.reverse() });
-                this.setState({searched: value});
+                setResultProducts(filterResults);
+                setSearched(value)
             }
-
         }
     }
 
+    useEffect(() => {
+        SearchProducts();
+    }, [])
 
-    componentDidMount() {
-        this.SearchProducts()
-    }
-    render() {
-        return (
-            <div>
-                <h6 className="s-results">Nəticə: {this.state.resultProducts.length}</h6>
-                {
-                    this.state.resultProducts.length > 0 ? <Content label={`Axtarıldı: "${this.state.searched}"`} products={this.state.resultProducts}/> : <Error message="Axtarılan növdə məhsul mövcut deyil"/>
-                }
-            </div>
-        )
-    }
+    return (
+        <div>
+            <h6 className="s-results">Nəticə: {resultProducts.length}</h6>
+            {
+                resultProducts.length > 0 ? <Content label={`Axtarıldı: "${searched}"`} products={resultProducts} /> : <Error message="Axtarılan növdə məhsul mövcut deyil" />
+            }
+        </div>
+    )
 }
+
+export default Search;

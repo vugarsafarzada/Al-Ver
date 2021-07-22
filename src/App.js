@@ -31,10 +31,10 @@ function App() {
         <Navigator />
         <Router>
           <Switch>
-            <Route exact path={"/"} render={props => (<Main products={products} />)} />
-            <Route exact path={"/main"} render={props => (<Main products={products} />)} />
+            <Route exact path={"/"} render={props => (<Main />)} />
+            <Route exact path={"/main"} render={props => (<Main />)} />
             <Route exact path={"/favorites"} render={props => (<Favorites />)} />
-            <Route exact path={"/products"} render={props => (<Product products={products} />)} />
+            <Route exact path={"/products"} render={props => (<Product />)} />
             <Route exact path={"/search"} component={Search} />
             <Route component={Error} /> 
           </Switch>
@@ -44,5 +44,5 @@ function App() {
     </productsContext.Provider>
   )
 }
-
+  
 export default App;
