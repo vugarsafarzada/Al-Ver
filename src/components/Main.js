@@ -3,7 +3,7 @@ import Content from './Content';
 function Main(props){
     return (
         <div>
-            <Content label="Ən yeni məhsullar"/>
+            <Content filter={true} label="Ən yeni məhsullar"/>
         </div>
     )
 }

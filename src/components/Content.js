@@ -2,7 +2,6 @@
 import React from 'react';
 import { useContext } from 'react';
 import { productsContext } from '../contexts/productsContext';
-
 //Components
 import Filter from './Filter';
 import Post from './Post';
@@ -45,8 +44,8 @@ function Content(props) {
 
     return (
         <div className="content">
-            <h2 className="content-label">{props.label}</h2>
-            <Filter hidden={false} />
+            <h3 className="content-label">{props.label}</h3>
+            <Filter hidden={!props.filter} />
             <div className="posts">
                 { posts2 ?  posts2 : posts }
             </div>

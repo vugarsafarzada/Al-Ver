@@ -22,8 +22,19 @@ function Search(props) {
                 var value = decodeURI(request).split("?key=")[1];
                 var filterResults = data.filter(item => item.productName.toLowerCase().startsWith(value.toLowerCase()));
                 setResultProducts(filterResults);
-                setSearched(value)
+                setSearched(`Axtarılan: ${value}`)
             }
+        }
+
+        if(requestType === "?categoryId"){
+            var value = decodeURI(request).split("?categoryId=")[1];
+            fetch(`http://localhost:3000/products${request}`)
+            .then(response => response.json())
+            .then(data => setResultProducts(data))
+
+            fetch(`http://localhost:3000/categories?id=${value}`)
+            .then(response => response.json())
+            .then(data => setSearched(data[0] ? data[0].categoryName : window.location.assign("/error")))
         }
     }
 
@@ -33,9 +44,9 @@ function Search(props) {
 
     return (
         <div>
-            <h6 className="s-results">Nəticə: {resultProducts.length}</h6>
+            <h6 className="s-results">{resultProducts.length} Məhsul</h6>
             {
-                resultProducts.length > 0 ? <Content label={`Axtarıldı: "${searched}"`} products={resultProducts} /> : <Error message="Axtarılan növdə məhsul mövcut deyil" />
+                resultProducts.length > 0 ? <Content label={searched} filter={false} products={resultProducts} /> : <Error message="Axtarılan növdə məhsul mövcut deyil" />
             }
         </div>
     )

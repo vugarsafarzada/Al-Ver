@@ -4,20 +4,31 @@ import { Row, Col } from 'reactstrap';
 
 function Product(props) {
     const [productData, setProductData] = useState([]);
+    const [category, setCategory] = useState();
+
+    var request = document.location.search;
+    var requestType = decodeURI(request).split("=")[0];
 
     var getProductByRequest = () => {
-        var request = document.location.search;
-        var requestType = decodeURI(request).split("=")[0];
-        var check = (data) => {
-            data.length !== 0 ? setProductData(data) : window.location.assign("/error");
-        }
-
         if (requestType === "?id") {
             if (request !== null) {
                 var productUrL = `http://localhost:3000/products${request}`
                 fetch(productUrL)
                     .then(response => response.json())
                     .then(data => check(data))
+
+                var check = (data) => {
+                    data.length !== 0 ? setProductData(data) : window.location.assign("/error");
+                    setCategoryName(data[0].categoryId);
+                    
+                }
+                
+                var setCategoryName = (value) =>{
+                    fetch(`http://localhost:3000/categories?id=${value}`)
+                    .then(response => response.json())
+                    .then(data => setCategory(data[0] ? data[0].categoryName : window.location.assign("/error")))
+                }
+
             } else {
                 window.location.assign("/main")
             }
@@ -26,13 +37,13 @@ function Product(props) {
 
     useEffect(() => {
         getProductByRequest()
-    }, [])
+    },[])
 
 
     return (
         <div className="content">
             {
-                productData.map(item => (
+                productData.map (item => (
                     <div className="product" key={item.id}>
                         <h2 className="text-center text-light">{item.productName}({item.quantityPerUnit})</h2>
                         <br />
@@ -70,6 +81,8 @@ function Product(props) {
                                             </button>
                                         </Col>
                                     </Row>
+                                    <span>Kategoriya: </span>
+                                    <a href={`/search?categoryId=${item.categoryId}`} style={{color:"gray"}}>{category}</a>
                                 </div>
                             </Col>
                         </Row>

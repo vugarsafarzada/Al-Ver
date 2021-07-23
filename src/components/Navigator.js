@@ -11,9 +11,9 @@ function Navigator() {
                         </a>
                     </NavItem>
                     <NavItem>
-                        <a href="/categories" className="nav-link" title="Kataloq">
+                        <a href="/categories" className="nav-link" title="Kategoriya">
                             <i className="fas fa-th-large nav-icon"></i>
-                            <span>Kataloq</span>
+                            <span>Kategoriya</span>
                         </a>
                     </NavItem>
                     <NavItem>

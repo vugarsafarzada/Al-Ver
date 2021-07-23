@@ -14,14 +14,20 @@ import Product from './components/Product';
 import Navigator from './components/Navigator';
 import Search from './components/Search';
 import Favorites from './components/Favorites';
+import Categories from './components/Categories';
 
 function App() {
   const [products, setProducts] = useState([""]);
+  const [categories, setCategories] = useState([""]);
 
   useEffect(() => {
     fetch('http://localhost:3000/products')
       .then(response => response.json())
       .then(data => setProducts(data.reverse()))
+
+    fetch('http://localhost:3000/categories')
+      .then(response => response.json())
+      .then(data => setCategories(data))
   }, []);
 
   return (
@@ -33,10 +39,11 @@ function App() {
           <Switch>
             <Route exact path={"/"} render={props => (<Main />)} />
             <Route exact path={"/main"} render={props => (<Main />)} />
+            <Route exact path={"/categories"} render={props => (<Categories  categories={categories}/>)} />
             <Route exact path={"/favorites"} render={props => (<Favorites />)} />
             <Route exact path={"/products"} render={props => (<Product />)} />
             <Route exact path={"/search"} component={Search} />
-            <Route component={Error} /> 
+            <Route component={Error} />
           </Switch>
         </Router>
         <Footer />
@@ -44,5 +51,5 @@ function App() {
     </productsContext.Provider>
   )
 }
-  
+
 export default App;
