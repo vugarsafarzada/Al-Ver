@@ -21,6 +21,7 @@
   <component name="ChangeListManager">
     <list default="true" id="2d29a35e-af09-4cc8-a77a-5288d9f8b52c" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/Search.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/Search.js" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -85,6 +86,7 @@
       <workItem from="1626493474477" duration="30000" />
       <workItem from="1626691184224" duration="348000" />
       <workItem from="1626773396183" duration="145000" />
+      <workItem from="1627076996855" duration="84000" />
     </task>
     <servers />
   </component>
@@ -125,10 +127,10 @@
       <screen x="0" y="0" width="1536" height="864" />
     </state>
     <state width="499" height="737" key="GridCell.Tab.0.right/0.0.1536.864@0.0.1536.864" timestamp="1625788300851" />
-    <state x="238" y="90" key="SettingsEditor" timestamp="1626773507505">
+    <state x="238" y="0" key="SettingsEditor" timestamp="1627077022106">
       <screen x="0" y="0" width="1536" height="864" />
     </state>
-    <state x="238" y="90" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1626773507505" />
+    <state x="238" y="0" key="SettingsEditor/0.0.1536.864/-1920.0.1920.1080@0.0.1536.864" timestamp="1627077022106" />
     <state x="277" y="78" key="SettingsEditor/0.0.1536.864@0.0.1536.864" timestamp="1625778396790" />
     <state x="431" y="181" width="672" height="678" key="search.everywhere.popup" timestamp="1625778331774">
       <screen x="0" y="0" width="1536" height="864" />

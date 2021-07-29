@@ -1,0 +1,31 @@
+.categories_box {
+    margin: 10px;
+    padding: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.category_box {
+    margin: 10px;
+    background: rgba(255, 255, 255, 0.5);
+    text-align: center;
+    width: 390px;
+    height: 130px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-decoration: none;
+}
+
+.category_box:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transition-duration: 0.3s;
+
+}
+
+.category_label {
+    color: azure;
+    font-size: 18px;
+}

@@ -1,0 +1,32 @@
+.navigator {
+    min-width: 100%;
+    margin: 0 auto;
+    background-color: rgba(105, 90, 205, 0.5);
+    margin-bottom: 2%;
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.nav_link {
+    text-decoration: none;
+    color: azure;
+    margin: 20px;
+}
+
+.nav_link:hover {
+    color: rgb(1, 248, 129);
+    transition: ease;
+    transition-duration: 0.3s;
+    text-shadow: 1px 1px 1px black;
+}
+
+.navs {
+    font-size: 18px;
+    margin-left: 3%;
+}
+
+.navs_name {
+    margin: 3px;
+}
