@@ -31,7 +31,7 @@ export const products = [
     categoryId: 2,
     productName: "Example4",
     quantityPerUnit: "10 Box",
-    favorite: false,
+    favorite: true,
     unitsInStock: 12,
     unitPrice: 100,
   },

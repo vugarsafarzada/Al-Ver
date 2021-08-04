@@ -16,13 +16,13 @@ function Search() {
         .then((response) => response.json())
         .then((data) => filterData(data));
 
-      var filterData = async (data) => {
+      var filterData = (data) => {
         var value = request.split("?key=")[1];
-        var filterResults = await data.filter((item) =>
+        var filterResults = data.filter((item) =>
           item.productName.toLowerCase().startsWith(value.toLowerCase())
         );
-        await setResultProducts(filterResults);
-        await setSearched(`Axtarılan: "${value}"`);
+        setResultProducts(filterResults);
+        setSearched(`Axtarılan: "${value}"`);
       };
     }
   };
