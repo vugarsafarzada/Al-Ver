@@ -11,18 +11,18 @@ function Search() {
     var request = decodeURI(window.location.search);
     var requestType = request.split("=")[0];
 
-    if (requestType === "?key") {
-      fetch("http://localhost:3001/products")
+   if (requestType === "?key") {
+      fetch(process.env.PRODUCTS_API)
         .then((response) => response.json())
         .then((data) => filterData(data));
 
-      var filterData = (data) => {
+      var filterData = async (data) => {
         var value = request.split("?key=")[1];
-        var filterResults = data.filter((item) =>
+        var filterResults = await data.filter((item) =>
           item.productName.toLowerCase().startsWith(value.toLowerCase())
         );
-        setResultProducts(filterResults);
-        setSearched(`Axtarılan: "${value}"`);
+        await setResultProducts(filterResults);
+        await setSearched(`Axtarılan: "${value}"`);
       };
     }
   };

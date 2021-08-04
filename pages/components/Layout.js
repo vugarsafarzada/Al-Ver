@@ -15,7 +15,7 @@ const Layout = ({ children }) => {
   };
 
   Router.onRouteChangeError = () => {
-    nProgress.done();
+    nProgress.done(); 
   };
 
   return (

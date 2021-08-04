@@ -1,0 +1,38 @@
+export const products = [
+  {
+    id: 1,
+    categoryId: 1,
+    productName: "Example1",
+    quantityPerUnit: "10 Box",
+    favorite: false,
+    unitsInStock: 12,
+    unitPrice: 100,
+  },
+  {
+    id: 2,
+    categoryId: 4,
+    productName: "Example2",
+    quantityPerUnit: "10 Box",
+    favorite: true,
+    unitsInStock: 12,
+    unitPrice: 100,
+  },
+  {
+    id: 3,
+    categoryId: 3,
+    productName: "Example3",
+    quantityPerUnit: "10 Box",
+    favorite: false,
+    unitsInStock: 12,
+    unitPrice: 100,
+  },
+  {
+    id: 4,
+    categoryId: 2,
+    productName: "Example4",
+    quantityPerUnit: "10 Box",
+    favorite: false,
+    unitsInStock: 12,
+    unitPrice: 100,
+  },
+];

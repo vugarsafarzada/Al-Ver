@@ -5,10 +5,11 @@ import Link from "next/link";
 
 function PostListing(props) {
   var posts = props.products.map((post) => (
-    <Link key={post.id} href={"/product/" + post.id}>
-      <a className="text-dark">
+    <Link key={post.id} href={"/products/" + post.id}>
+      <a key={post.id} className="text-dark">
         <Post
           id={post.id}
+          key={post.id}
           category_id={post.categoryId}
           product_name={post.productName}
           quantity_per_unit={post.quantityPerUnit}

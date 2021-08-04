@@ -4,7 +4,7 @@ function Post(props) {
   return (
     <div className={styles.post} title={props.product_name}>
       <div className={styles.post_img}>
-        <button className="btn post_fav_btn">
+        <button className="btn" id={styles.post_fav_btn}>
           <i
             className={
               props.favorite ? "fas fa-heart text-danger" : "far fa-heart"

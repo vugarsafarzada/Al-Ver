@@ -14,7 +14,7 @@ function category(props) {
 }
 
 export const getStaticPaths = async () =>{
-    const res = await fetch('http://localhost:3001/products');
+    const res = await fetch(process.env.PRODUCTS_API);
     const allProducts = await res.json();
     const getPaths = allProducts.map(product => {
       return {
@@ -30,10 +30,10 @@ export const getStaticPaths = async () =>{
 }
 
 export const getStaticProps = async (context) => {
-  const res = await fetch(`http://localhost:3001/products?categoryId=${context.params.id}`);
-  const category = await fetch(`http://localhost:3001/categories/${context.params.id}`);
+  const res = await fetch(`${process.env.PRODUCTS_API}/categoryid/${context.params.id}`);
+  const res2 = await fetch(`${process.env.CATEGORIES_API}/${context.params.id}`);
   const productsByCategories = await res.json();
-  const categoryName = (await category.json()).categoryName;
+  const categoryName = (await res2.json())[0].categoryName;   
   return {
     props: {
       productsByCategories,

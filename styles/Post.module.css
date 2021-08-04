@@ -47,7 +47,7 @@
     display: block;
 }
 
-.post_fav_btn {
+#post_fav_btn {
     margin-left: 82%;
     font-size: 25px;
     padding: 0;

@@ -14,7 +14,7 @@ function categories(props) {
 }
 
 export const getStaticProps = async () =>{
-    const res = await fetch("http://localhost:3001/categories");
+    const res = await fetch(process.env.CATEGORIES_API);
     const categories = await res.json();
 
     return{

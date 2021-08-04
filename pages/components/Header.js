@@ -7,9 +7,8 @@ import { useState, useEffect } from "react";
 
 function Header() {
   const [products, setProducts] = useState([]);
-
   useEffect(() => {
-    fetch("http://localhost:3001/products")
+    fetch(process.env.PRODUCTS_API)
       .then((response) => response.json())
       .then((data) => setProducts(data));
   }, []);
@@ -55,15 +54,13 @@ function Header() {
           id="search_box"
           className={styles.searchbox}
           placeholder="Axtar..."
-          onChange={searchBoxHandler}
-        />
+          onChange={searchBoxHandler}/>
         <datalist id="search_box_list">{didumeans}</datalist>
         <button
           type="search"
           title="Axtar"
           onClick={() => search()}
-          className={styles.search_btn}
-        >
+          className={styles.search_btn}>
           <i className="fas fa-search"></i>
         </button>
       </div>
