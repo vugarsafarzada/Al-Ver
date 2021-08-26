@@ -54,7 +54,7 @@ function Header() {
           id="search_box"
           className={styles.searchbox}
           placeholder="Axtar..."
-          onChange={searchBoxHandler}/>
+          onChange={searchBoxHandler} />
         <datalist id="search_box_list">{didumeans}</datalist>
         <button
           type="search"

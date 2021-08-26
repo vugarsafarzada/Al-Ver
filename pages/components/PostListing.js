@@ -16,6 +16,7 @@ function PostListing(props) {
           product_price={post.unitPrice}
           favorite={post.favorite}
           product_stocks={post.unitsInStock}
+          date={post.date}
         />
       </a>
     </Link>

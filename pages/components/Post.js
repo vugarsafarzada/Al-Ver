@@ -17,7 +17,7 @@ function Post(props) {
       <br />
       <span className={styles.post_name}>{props.product_name}</span>
       <br />
-      <span className={styles.post_date}>Paylaşıldı: dd-mm-yyyy</span>
+      <span className={styles.post_date}>Paylaşıldı: {props.date}</span>
     </div>
   );
 }

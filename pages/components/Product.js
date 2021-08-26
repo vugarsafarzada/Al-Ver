@@ -59,6 +59,8 @@ function Product(props) {
             className="text-secondary">
             {props.category}
           </a>
+          <br />
+          <span style={{fontSize:"13px", color:"grey"}}>Paylaşım tarixi: {product.date}</span>
         </div>
       </div>
     </div>

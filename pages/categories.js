@@ -24,4 +24,4 @@ export const getStaticProps = async () =>{
     }
 }
 
-export default categories
+export default categories;
